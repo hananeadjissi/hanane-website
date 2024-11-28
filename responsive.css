@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+:root{
+    --primary-color: #fafafa;
+    --secndary-color: #1A1A1A;
+    --paragraph: #4a4a4d;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    background-color: var(--primary-color);
+}
+
+h1 ,
+h2, h3{
+    font-family: "Syne", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+/*Tablet responsive*/
+
+@media (max-width: 1024px){
+
+    header{
+        height: 80vh;
+    }
+
+
+
+    header ul li .btn{
+        display: none;
+    }  
+
+    header nav ul li .unique{
+        display: block;
+    }
+
+    header .navbar nav{
+        display: block;
+        text-align: center;
+    }
+
+    header nav ul{
+        margin-top: 20px;
+    }
+
+    header nav ul li a{
+        margin: 0 8px; 
+    }
+
+    header .header-content .btn-arrow{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 32px;
+    }
+
+    header .fa-solid{
+        
+        font-size: 30px;
+        
+    }
+
+    /*About*/
+
+    #about{
+        padding: 8rem 0 4rem;
+    }
+
+    #about .about-screen{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        row-gap: 1.5rem;
+        padding: 32px;
+        background-color: #F9F9F9;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.14);
+        border-radius: 4px;
+        
+}
+
+    #about .about-screen h3{
+        font-size: 48px;
+    }
+
+    #about .about-screen img{
+        width: 150px;
+    }
+
+    #about .about-screen p{
+        line-height: 1.6rem;
+        color: var(--paragraph);
+    }
+
+    #about .about-screen span{
+        color: var(--secndary-color);
+        font-size: 18px;
+        font-weight: 700;
+        font-family: "Syne", sans-serif;
+    }
+
+    #about .circle{
+    display: none;
+    }
+
+    #about h2{
+    display: none;   
+    }
+
+    /*work*/
+    #my-work .row{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 4rem;
+    }
+
+
+    /*contact*/
+
+    #contact .row{
+        padding: 6rem 0 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #contact .col-2 .infos{
+        display: none;
+    
+    }
+
+    #contact .row .col-1 .send-message{
+        position: absolute;
+        left: 32px;
+        padding: 1.5rem;
+        
+    }
+}
+
+/*Mobile*/
+
+@media (max-width: 540px){
+
+
+    .blur{
+        position: absolute;
+        right: 30px;
+        top: 78px;
+    }
+    
+    .blur-img{
+        width: 200px;
+    }
+
+    header .header-content{
+        padding: 3rem 2rem 0;
+    }
+
+    header .header-content h1{
+        line-height: 48px;
+        font-size: 36px;
+
+    }
+
+    header nav ul li a{
+        font-size: 12px;
+            
+        }
+    
+    
+
+    /*About*/
+    #about .about-screen{
+        width: 100%;
+}
+
+#about .about-screen h3{
+    font-size: 32px;
+}
+
+#about .about-screen img{
+    width: 150px;
+}
+
+#about .about-screen p{
+    line-height: 1.6rem;
+    color: var(--paragraph);
+}
+
+
+
+    #about .about-screen img{
+        width: 120px;
+    }
+
+    #about .about-screen p{
+        line-height: 1.6rem;
+        color: var(--paragraph);
+    }
+
+    /*work*/
+    #my-work h2, #contact h2{
+        font-size: 28px;
+
+        }
+
+        #my-work hr{
+            width: 80px;
+        }
+
+        #my-work .row{
+            grid-template-columns: 1fr;
+            row-gap: 4rem;
+        }
+
+        /*contact*/
+        #contact hr{
+        width: 100px;
+        }
+
+    #contact .row{
+        display : none;
+    }
+
+    #contact .row-screen{
+        display: block;
+    }
+
+    #contact .row-screen{
+        background-color: var(--primary-color);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.14);
+        padding: 1.5rem;
+        margin-top: 4rem;
+    }
+
+    #contact .row-screen h3{
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    #contact .row-screen .input-col{
+        display: flex;
+        flex-direction: column;
+        margin: 16px 0;
+        
+    }
+
+    #contact .row-screen .input-col input,
+    #contact .row-screen .input-col textarea {
+        background-color: var(--primary-color);
+        border: none;
+        border-bottom: 1px solid #CCCCCC;
+        padding: 8px;
+    }
+
+    #contact .row-screen .input-col label{
+        font-size: 12px;
+        color: #9a9a9a;
+    }
+
+    #contact .row-screen button{
+        margin-top: 16px;
+    }
+        
+}
